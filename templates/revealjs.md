@@ -99,6 +99,10 @@ $endif$
   // Code Tracing
   <script src="$revealjs-url$/../codetrace.js"></script>
 
+$for(js)$
+  <script src="$js$"></script>
+$endfor$
+
   <script>
 
       // Full list of configuration options available at:
