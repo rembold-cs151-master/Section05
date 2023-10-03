@@ -99,8 +99,8 @@ $endif$
   // Code Tracing
   <script src="$revealjs-url$/../codetrace.js"></script>
 
-$for(js)$
-  <script src="$js$"></script>
+$for(tracejs)$
+  <script src="$tracejs$Trace.js"></script>
 $endfor$
 
   <script>
@@ -408,6 +408,9 @@ $endif$
             // { src: "$revealjs-url$/plugin/title-footer/title-footer.js", async: true, callback: function() { title_footer.initialize({css:"$revealjs-url$/plugin/title-footer/title-footer.css"}); } },
 		],
       });
+$for(tracejs)$
+  Reveal.addEventListener("$tracejs$Trace", $tracejs$Demo);
+$endfor$
     </script>
   $for(include-after)$
   $include-after$

@@ -12,8 +12,8 @@ css:
   - css/codetrace.css
   - css/roberts.css
   - MysteryTrace.css
-js:
-  - MysteryTrace.js
+tracejs:
+  - Mystery
 ---
 
 
@@ -109,7 +109,7 @@ if __name__ == "__main__":
 ## Practice Midterm: 1c
 
 
-## Practice Midterm: 2
+## Practice Midterm: 2 {data-state="MysteryTrace"}
 <table id="MysteryTable">
 <tbody style="border:none;">
 <tr><td><div id="MysteryTrace" style="margin:0px;"></div></td></tr>
