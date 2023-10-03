@@ -94,6 +94,7 @@ $if(mathjax)$
 $endif$
 $if(highlightjs)$
   <script src="$revealjs-url$/plugin/highlight/highlight.js"></script>
+  <script src="$revealjs-url$/../python_language.js"></script>
 $endif$
 
   // Code Tracing
@@ -367,6 +368,13 @@ $if(mathjax)$
 		  CommonHTML: {scale: 80},
 		},
 $endif$
+$if(highlightjs)$
+          highlight: {
+            beforeHighlight: hljs => hljs.registerLanguage("mypython", function(hljs) {
+              console.log(mypythondef);
+              return mypythondef(hljs); } )
+          },
+$endif$
         // reveal.js plugins
         plugins: [
 $if(mathjax)$
@@ -412,6 +420,18 @@ $for(tracejs)$
   Reveal.addEventListener("$tracejs$Trace", $tracejs$Demo);
 $endfor$
     </script>
+  <script>
+  // This is admitedly a very hacky way to achieve my pseudo code highlighting, but it works?
+    function remove_bars() {
+      var pseudoBlocks = document.getElementsByClassName("hljs-pseudo");
+      console.log(pseudoBlocks);
+      for ( var i = 0; i < pseudoBlocks.length; i++) {
+        pseudoBlocks[i].innerHTML = pseudoBlocks[i].innerHTML.replaceAll("\|\|\|", "");
+      }
+      }
+    // omg this is even more hacky now, but I need this to run after hljs has done its thing
+    setTimeout(remove_bars, 100);
+  </script>
   $for(include-after)$
   $include-after$
   $endfor$

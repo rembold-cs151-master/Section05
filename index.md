@@ -102,11 +102,18 @@ if __name__ == "__main__":
 
 ## Practice Midterm: 1a
 
+![](./images/exam1_p1a.svg)
+
 
 ## Practice Midterm: 1b
 
+![](./images/exam1_p1b.svg)
+
 
 ## Practice Midterm: 1c
+
+![](./images/exam1_p1c.svg)
+
 
 
 ## Practice Midterm: 2 {data-state="MysteryTrace"}
@@ -140,3 +147,39 @@ if __name__ == "__main__":
 </td>
 </tr>
 </table>
+
+## Practice Midterm: 3
+
+```mypython
+def sum_odds(N):
+    total = 0
+    for i in range(1, 2*N, 2):
+        total += i
+    return total
+```
+
+## Practice Midterm: 4
+
+```mypython
+def remove_dups(word):
+    new = ""
+    for i in range(len(word)):
+        if not (i > 0 and word[i] == word[i-1]):
+            new += word[i]
+    return new
+```
+
+
+## Practice Midterm 2: Problem 1a
+
+![](./images/exam2_p1a.svg)
+
+
+## Practice Midterm 2: Problem 1b
+
+![](./images/exam2_p1b.svg)
+
+
+## Practice Midterm 2: Problem 1c
+
+![](./images/exam2_p1c.svg)

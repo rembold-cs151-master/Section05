@@ -109,9 +109,9 @@ class Mystery extends CTFunction {
 }
 
 Mystery.HTML =
-    "<span class='keyword'>def</span> mystery(w):\n" +
-    "    <span class='keyword'>def</span> enigma(s, k):\n" +
-    "        return s[4 - k % 3]\n" +
+    "<span class='skeyword'>def</span> <span class='funcname'>mystery</span>(<span class='params'>w</span>):\n" +
+    "    <span class='skeyword'>def</span> <span class='funcname'>enigma</span>(<span class='params'>s, k</span>):\n" +
+    "        <span class='keyword'>return</span> s[4 - k % 3]\n" +
     "\n" +
     "    <span class='#1'>s = <span class='strlit'>\"\"</span></span>\n" +
     "    <span class='#2'><span class='keyword'>for</span> " +
@@ -158,6 +158,6 @@ class Enigma extends CTFunction {
 }
 
 Enigma.HTML =
-    "<span class='keyword'>def</span> enigma(s, k):\n" +
+    "<span class='skeyword'>def</span> <span class='funcname'>enigma</span>(<span class='params'>s, k</span>):\n" +
     "    <span class='#1'>return <span class='#1a'>s" +
          "[<span class='#1b'>4 - k % 3</span>]</span></span>\n";
