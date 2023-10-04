@@ -65,6 +65,13 @@ $endfor$
 $if(date)$
   <p class="date">$date$</p>
 $endif$
+$if(content_url)$
+<div class="titlelinks">
+<a title="Template Repo" href="$content_url$"><i class="fa-solid fa-folder-tree"></i></a>
+<a title="Template Zip"  href="$content_url$/zipball/master/"><i class="fa-solid fa-file-zipper"></i></a>
+<a title="Questions"     href="$content_url$/raw/main/SectionQuestions.pdf"><i class="fa-solid fa-file-pdf"></i></a>
+</div>
+$endif$
 </section>
 $endif$
 $if(toc)$
@@ -96,6 +103,9 @@ $if(highlightjs)$
   <script src="$revealjs-url$/plugin/highlight/highlight.js"></script>
   <script src="$revealjs-url$/../python_language.js"></script>
 $endif$
+
+  // Font Awesome Characters
+  <script src="https://kit.fontawesome.com/4bc05635b0.js" crossorigin="anonymous"></script>
 
   // Code Tracing
   <script src="$revealjs-url$/../codetrace.js"></script>
