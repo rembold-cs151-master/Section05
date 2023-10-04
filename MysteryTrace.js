@@ -32,7 +32,7 @@ class MysteryTrace extends CodeTrace {
 
     reset() {
         let console = document.getElementById("MysteryConsole");
-        console.innerHTML = "";
+        console.innerHTML = '<span class="prompt">>>></span> <span class="builtin">print</span>(mystery(<span class="strlit">"abcdefgh"</span>)) <br />';
         super.reset();
     }
 
@@ -159,5 +159,5 @@ class Enigma extends CTFunction {
 
 Enigma.HTML =
     "<span class='skeyword'>def</span> <span class='funcname'>enigma</span>(<span class='params'>s, k</span>):\n" +
-    "    <span class='#1'>return <span class='#1a'>s" +
+    "    <span class='#1'><span class='keyword'>return</span> <span class='#1a'>s" +
          "[<span class='#1b'>4 - k % 3</span>]</span></span>\n";

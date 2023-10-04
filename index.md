@@ -12,8 +12,10 @@ css:
   - css/codetrace.css
   - css/roberts.css
   - MysteryTrace.css
+  - Mystery2Trace.css
 tracejs:
   - Mystery
+  - Mystery2
 ---
 
 
@@ -55,7 +57,7 @@ tracejs:
 
 
 ## Tic-Tac-Solution
-```{.mypython style='font-size:.8em; max-height:900px'}
+```{.mypython style='font-size:.8em; max-height:800px'}
 # File: TicTacToeBoard.py
 
 """
@@ -100,23 +102,23 @@ if __name__ == "__main__":
 - The actual Midterm 1 will have the same number of questions, each with the same topics.
 
 
-## Practice Midterm: 1a
+## Practice Midterm 1: Problem 1a
 
 ![](./images/exam1_p1a.svg)
 
 
-## Practice Midterm: 1b
+## Practice Midterm 1: Problem 1b
 
 ![](./images/exam1_p1b.svg)
 
 
-## Practice Midterm: 1c
+## Practice Midterm 1: Problem 1c
 
 ![](./images/exam1_p1c.svg)
 
 
 
-## Practice Midterm: 2 {data-state="MysteryTrace"}
+## Practice Midterm 1: Problem 2 {data-state="MysteryTrace"}
 <table id="MysteryTable">
 <tbody style="border:none;">
 <tr><td><div id="MysteryTrace" style="margin:0px;"></div></td></tr>
@@ -148,7 +150,8 @@ if __name__ == "__main__":
 </tr>
 </table>
 
-## Practice Midterm: 3
+## Practice Midterm 1: Problem 3
+One approach might look like:
 
 ```mypython
 def sum_odds(N):
@@ -158,7 +161,7 @@ def sum_odds(N):
     return total
 ```
 
-## Practice Midterm: 4
+## Practice Midterm 1: Problem 4
 
 ```mypython
 def remove_dups(word):
@@ -183,3 +186,67 @@ def remove_dups(word):
 ## Practice Midterm 2: Problem 1c
 
 ![](./images/exam2_p1c.svg)
+
+
+## Practice Midterm 2: Problem 2 {data-state="Mystery2Trace"}
+<table id="Mystery2Table">
+<tbody style="border:none;">
+<tr><td><div id="Mystery2Trace" style="margin:0px;"></div></td></tr>
+<tr><td>
+<div id="Mystery2Banner" style="margin:0px; padding:0px;">Console</div>
+</td></tr>
+<tr><td><div id="Mystery2Console"></div></td></tr>
+<tr>
+<td style="text-align:center;">
+<table class="CTControlStrip">
+<tbody>
+<tr>
+<td>
+<img id=Mystery2TraceStepInButton
+     class="CTButton"
+     src="images/StepInControl.png"
+     alt="StepInButton" />
+</td>
+<td>
+<img id=Mystery2TraceResetButton
+     class="CTButton"
+     src="images/ResetControl.png"
+     alt="ResetButton" />
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+
+
+## Practice Midterm 2: Problem 3
+- We need to be checking all possibilities between two different values, which would imply nested loops
+- One approach might look like:
+```mypython
+def perfect_squares(N):
+    count = 0
+    for a in range(N):
+        for b in range(N):
+            if a ** 2 + b ** 2 == N ** 2:
+                print(f"A={A}, B={b}")
+                count += 1
+    return count
+```
+
+## Practice Midterm 2: Problem 4
+- This is mostly just practicing conditional statements and string operations to check the needed constraints
+- One solution:
+```mypython
+def create_regular_plural(word):
+    plural = ""
+    if ( word[1] in "sxz" or 
+         word[-2:] == "ch" or word[-2:] == "sh"
+       ): # Condition 1
+        return word + "es"
+    elif word[-1] == "y" and word[-2] not in "aeiou": # C2
+        return word[:-1] + "ies"
+    else: # Condition 3 (all else)
+        return word + "s"
+```
