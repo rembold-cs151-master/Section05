@@ -37,7 +37,7 @@
 <section id="title-slide">
   <h1 class="title">Section 5: Graphics and Midterm Review</h1>
   <p class="author">Jed Rembold and Eric Roberts</p>
-  <p class="date">Week of October 2nd</p>
+  <p class="date">Week of February 19</p>
 <div class="titlelinks">
 <a title="Template Repo" href="https://github.com/rembold-cs151-master/Section05"><i class="fa-solid fa-folder-tree"></i></a>
 <a title="Template Zip"  href="https://github.com/rembold-cs151-master/Section05/zipball/master/"><i class="fa-solid fa-file-zipper"></i></a>
@@ -2692,7 +2692,7 @@ operations to check the needed constraints</li>
 </ul>
 <pre ><code class="mypython">def create_regular_plural(word):
     plural = ""
-    if ( word[1] in "sxz" or 
+    if ( word[-1] in "sxz" or 
          word[-2:] == "ch" or word[-2:] == "sh"
        ): # Condition 1
         return word + "es"
