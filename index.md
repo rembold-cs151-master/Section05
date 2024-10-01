@@ -1,7 +1,7 @@
 ---
 title: "Section 5: Graphics and Midterm Review"
 author: Jed Rembold and Eric Roberts
-date: Week of February 19
+date: Week of September 30th
 slideNumber: true
 theme: monokai
 highlightjs-theme: monokai
@@ -241,7 +241,6 @@ def perfect_squares(N):
 - One solution:
 ```mypython
 def create_regular_plural(word):
-    plural = ""
     if ( word[-1] in "sxz" or 
          word[-2:] == "ch" or word[-2:] == "sh"
        ): # Condition 1
