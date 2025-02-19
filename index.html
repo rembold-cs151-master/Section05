@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Jed Rembold and Eric Roberts">
-  <title>Section 5: Graphics and Midterm Review</title>
+  <title>Section 5: Midterm Review</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -38,9 +38,9 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">Section 5: Graphics and Midterm Review</h1>
+  <h1 class="title">Section 5: Midterm Review</h1>
   <p class="author">Jed Rembold and Eric Roberts</p>
-  <p class="date">Week of September 30th</p>
+  <p class="date">Week of February 17th</p>
 <div class="titlelinks">
 <a title="Template Repo" href="https://github.com/rembold-cs151-master/Section05"><i class="fa-solid fa-folder-tree"></i></a>
 <a title="Template Zip"  href="https://github.com/rembold-cs151-master/Section05/zipball/master/"><i class="fa-solid fa-file-zipper"></i></a>
@@ -48,491 +48,22 @@
 </div>
 </section>
 
-<section id="the-classic-game" class="slide level2">
-<h2>The Classic Game</h2>
+<section id="midterm-reviews" class="slide level2">
+<h2>Midterm Reviews</h2>
 <ul>
-<li><p>Write a graphical program
-<code class="python">TicTacToeBoard.py</code> that draws a Tic-Tac-Toe
-board centered in the graphics window, as shown in the following
-image:</p>
-<p><img data-src="./images/TicTacToeBoard-out.png"
-style="width:50.0%" /></p>
-<p>The size of the board should be specified as a constant, and the
-diagram should be centered in the window, both horizontally and
-vertically.</p></li>
-</ul>
-</section>
-<section id="coordinate-calculations" class="slide level2">
-<h2>Coordinate Calculations</h2>
-<ul>
-<li>One of the problems that people often have is calculating the
-coordinates for each <code class="python">GObject</code> on the screen
-given the constants provided in the template.</li>
-</ul>
-<div class="cols">
-<div class="col" style="flex-grow:1.2">
-<div style="font-size:.8em">
-<ul>
-<li class="fragment" data-fragment-index="1">
-Here are some useful steps:
-</li>
-<ul>
-<li class="fragment" data-fragment-index="2">
-Find a sheet of graph paper
-</li>
-<li class="fragment" data-fragment-index="3">
-Draw the figure you want
-</li>
-<li class="fragment" data-fragment-index="4">
-Compute the coordinates of the center of the window
-</li>
-<li class="fragment" data-fragment-index="5">
-Compute the coordinates of each point in terms of defined constants and
-the center
-</li>
-<ul>
-<li class="fragment" data-fragment-index="6">
-The <em>x</em> coordinate of the first vertical line is shifted left by
-one-sixth of the board size
-</li>
-<li class="fragment" data-fragment-index="7">
-The <em>y</em> coordinate of that line is shifted up by half the size of
-the board
-</li>
-</ul>
-</ul>
-</ul>
-</div>
-</div>
-<div class="col">
-<p><?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   width="173.98294mm"
-   height="176.94711mm"
-   viewBox="0 0 173.98294 176.94711"
-   version="1.1"
-   id="svg1"
-   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
-   sodipodi:docname="tictactoe.svg"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview1"
-     pagecolor="#373737"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="mm"
-     inkscape:zoom="0.99528652"
-     inkscape:cx="396.87064"
-     inkscape:cy="239.62949"
-     inkscape:window-width="2560"
-     inkscape:window-height="1413"
-     inkscape:window-x="1080"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
-  <defs
-     id="defs1" />
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(-246.2955,-31.981032)">
-    <g
-       inkscape:label="GridCartesian:X5:Y5"
-       transform="matrix(6.9090348,0,0,6.9090348,246.92403,35.573741)"
-       id="g94"
-       style="stroke:#49483e;stroke-width:0.687668"
-       class="fragment"
-       data-fragment-index="2">
-      <g
-         inkscape:label="MajorXGridlines"
-         id="g59"
-         style="stroke:#49483e;stroke-width:0.687668">
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.181945"
-           d="M 5,0 V 25"
-           inkscape:label="MajorXDiv1"
-           id="path56" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.181945"
-           d="M 10,0 V 25"
-           inkscape:label="MajorXDiv2"
-           id="path57" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.181945"
-           d="M 15,0 V 25"
-           inkscape:label="MajorXDiv3"
-           id="path58" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.181945"
-           d="M 20,0 V 25"
-           inkscape:label="MajorXDiv4"
-           id="path59" />
-      </g>
-      <g
-         inkscape:label="MajorYGridlines"
-         id="g63"
-         style="stroke:#49483e;stroke-width:0.687668">
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.181945"
-           d="M 0,5 H 25"
-           inkscape:label="MajorYDiv1"
-           id="path60" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.181945"
-           d="M 0,10 H 25"
-           inkscape:label="MajorYDiv2"
-           id="path61" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.181945"
-           d="M 0,15 H 25"
-           inkscape:label="MajorYDiv3"
-           id="path62" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.181945"
-           d="M 0,20 H 25"
-           inkscape:label="MajorYDiv4"
-           id="path63" />
-      </g>
-      <g
-         inkscape:label="SubMinorXGridlines"
-         id="g78"
-         style="stroke:#49483e;stroke-width:0.687668">
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 1.25,0 V 25"
-           inkscape:label="SubminorXDiv0:0:1"
-           id="path64" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 2.5,0 V 25"
-           inkscape:label="SubminorXDiv0:0:2"
-           id="path65" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 3.75,0 V 25"
-           inkscape:label="SubminorXDiv0:0:3"
-           id="path66" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 6.25,0 V 25"
-           inkscape:label="SubminorXDiv1:0:1"
-           id="path67" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 7.5,0 V 25"
-           inkscape:label="SubminorXDiv1:0:2"
-           id="path68" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 8.75,0 V 25"
-           inkscape:label="SubminorXDiv1:0:3"
-           id="path69" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 11.25,0 V 25"
-           inkscape:label="SubminorXDiv2:0:1"
-           id="path70" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 12.5,0 V 25"
-           inkscape:label="SubminorXDiv2:0:2"
-           id="path71" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 13.75,0 V 25"
-           inkscape:label="SubminorXDiv2:0:3"
-           id="path72" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 16.25,0 V 25"
-           inkscape:label="SubminorXDiv3:0:1"
-           id="path73" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 17.5,0 V 25"
-           inkscape:label="SubminorXDiv3:0:2"
-           id="path74" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 18.75,0 V 25"
-           inkscape:label="SubminorXDiv3:0:3"
-           id="path75" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 21.25,0 V 25"
-           inkscape:label="SubminorXDiv4:0:1"
-           id="path76" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 22.5,0 V 25"
-           inkscape:label="SubminorXDiv4:0:2"
-           id="path77" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 23.75,0 V 25"
-           inkscape:label="SubminorXDiv4:0:3"
-           id="path78" />
-      </g>
-      <g
-         inkscape:label="SubMinorYGridlines"
-         id="g93"
-         style="stroke:#49483e;stroke-width:0.687668">
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 0,1.25 H 25"
-           inkscape:label="SubminorXDiv0:0:1"
-           id="path79" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 0,2.5 H 25"
-           inkscape:label="SubminorXDiv0:0:2"
-           id="path80" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 0,3.75 H 25"
-           inkscape:label="SubminorXDiv0:0:3"
-           id="path81" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 0,6.25 H 25"
-           inkscape:label="SubminorXDiv1:0:1"
-           id="path82" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 0,7.5 H 25"
-           inkscape:label="SubminorXDiv1:0:2"
-           id="path83" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 0,8.75 H 25"
-           inkscape:label="SubminorXDiv1:0:3"
-           id="path84" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 0,11.25 H 25"
-           inkscape:label="SubminorXDiv2:0:1"
-           id="path85" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 0,12.5 H 25"
-           inkscape:label="SubminorXDiv2:0:2"
-           id="path86" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 0,13.75 H 25"
-           inkscape:label="SubminorXDiv2:0:3"
-           id="path87" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 0,16.25 H 25"
-           inkscape:label="SubminorXDiv3:0:1"
-           id="path88" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 0,17.5 H 25"
-           inkscape:label="SubminorXDiv3:0:2"
-           id="path89" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 0,18.75 H 25"
-           inkscape:label="SubminorXDiv3:0:3"
-           id="path90" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 0,21.25 H 25"
-           inkscape:label="SubminorXDiv4:0:1"
-           id="path91" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 0,22.5 H 25"
-           inkscape:label="SubminorXDiv4:0:2"
-           id="path92" />
-        <path
-           style="fill:none;stroke:#49483e;stroke-width:0.0545837"
-           d="M 0,23.75 H 25"
-           inkscape:label="SubminorXDiv4:0:3"
-           id="path93" />
-      </g>
-      <rect
-         x="0"
-         y="0"
-         width="25"
-         height="25"
-         style="fill:none;stroke:#49483e;stroke-width:0.181945"
-         inkscape:label="Border"
-         id="rect93" />
-    </g>
-    <g
-       id="g100"
-       transform="matrix(1.4041929,0,0,1.397251,193.83313,-57.993238)"
-       style="stroke-width:0.71392"
-       class="fragment"
-       data-fragment-index="3">
-      <path
-         style="fill:none;stroke:#a6e22e;stroke-width:2.35593;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
-         d="M 81.399648,76.758481 81.052978,180.49541"
-         id="path94" />
-      <path
-         style="fill:none;stroke:#a6e22e;stroke-width:2.35593;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
-         d="M 117.64314,76.758481 117.29647,180.49541"
-         id="path95" />
-      <path
-         style="fill:none;stroke:#a6e22e;stroke-width:2.35593;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
-         d="M 150.81926,111.48696 47.082331,111.14029"
-         id="path96" />
-      <path
-         style="fill:none;stroke:#a6e22e;stroke-width:2.35593;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
-         d="M 150.81926,146.21386 47.082331,145.86719"
-         id="path97" />
-    </g>
-    <g
-       id="g101"
-       class="fragment"
-       data-fragment-index="4">
-      <path
-         d="m 321.49947,133.1209 q -0.87049,-0.42741 -1.17634,-1.35279 -0.30585,-0.92931 -0.0353,-2.32131 0.27056,-1.39592 0.93715,-2.32131 0.66659,-0.92931 1.70177,-1.35671 l -0.0745,0.38427 q -0.68228,0.41564 -1.094,1.17242 -0.40779,0.75286 -0.67443,2.12133 -0.26664,1.36455 -0.15292,2.12133 0.11763,0.75286 0.64306,1.1685 z m 5.25431,-2.50168 q -0.28232,0.66659 -0.78815,1.01557 -0.5019,0.34898 -1.19202,0.34898 -0.9097,0 -1.34495,-0.59993 -0.30192,-0.41956 -0.30192,-1.02342 0,-0.27056 0.0588,-0.5764 0.19606,-0.99989 0.86265,-1.5959 0.67052,-0.59994 1.58022,-0.59994 0.39603,0 0.76854,0.0941 0.37643,0.0902 0.73325,0.2784 l -0.2039,1.06655 h -0.41956 q 0,-0.0549 0,-0.10195 0,-0.47054 -0.2039,-0.69796 -0.22742,-0.25095 -0.74109,-0.25095 -0.58425,0 -0.97244,0.45485 -0.38427,0.45093 -0.56072,1.35279 -0.0784,0.41171 -0.0784,0.73325 0,0.37643 0.1098,0.62346 0.20782,0.45485 0.79598,0.45485 0.46662,0 0.79207,-0.24311 0.32546,-0.24311 0.52543,-0.73325 z m 1.04302,1.25084 h -0.49014 l 1.83901,-1.99978 -0.92539,-1.74882 h -0.51366 l 0.0784,-0.41956 h 1.0587 l 0.86657,1.62334 1.49395,-1.62334 h 0.49014 l -1.80372,1.96056 0.95284,1.79196 h 0.54503 l -0.0784,0.41564 h -1.09399 l -0.88618,-1.66256 z m 4.17208,0.7803 q 0.42348,-0.27056 0.66659,-0.63914 0.24311,-0.36467 0.34506,-0.88618 l 0.0274,-0.14508 h 0.77246 q -0.16076,0.67051 -0.54111,1.14889 -0.37643,0.4823 -1.01558,0.8352 z m 6.36399,-2.03114 q -0.28232,0.66659 -0.78815,1.01557 -0.5019,0.34898 -1.19202,0.34898 -0.9097,0 -1.34495,-0.59993 -0.30192,-0.41956 -0.30192,-1.02342 0,-0.27056 0.0588,-0.5764 0.19606,-0.99989 0.86265,-1.5959 0.67052,-0.59994 1.58022,-0.59994 0.39603,0 0.76854,0.0941 0.37643,0.0902 0.73325,0.2784 l -0.2039,1.06655 h -0.41956 q 0,-0.0549 0,-0.10195 0,-0.47054 -0.2039,-0.69796 -0.22742,-0.25095 -0.74109,-0.25095 -0.58425,0 -0.97244,0.45485 -0.38427,0.45093 -0.56072,1.35279 -0.0784,0.41171 -0.0784,0.73325 0,0.37643 0.1098,0.62346 0.20782,0.45485 0.79599,0.45485 0.46661,0 0.79206,-0.24311 0.32546,-0.24311 0.52543,-0.73325 z m 5.14844,-2.88203 q -0.38819,2.24288 -1.07046,3.42706 -0.99989,1.73706 -1.80372,2.25857 -0.35683,0.23135 -1.2979,0.23135 -0.18429,0 -0.3725,-0.0314 -0.1843,-0.0314 -0.37251,-0.0902 l 0.15684,-0.79598 h 0.36859 q -0.008,0.0627 -0.008,0.12155 0,0.16469 0.0706,0.25879 0.098,0.13332 0.3529,0.13332 0.69012,0 1.29005,-0.59993 l -0.9842,-4.5289 h -0.47446 l 0.0823,-0.41956 h 1.07831 l 0.92539,4.13679 q 0.6313,-0.94499 0.78423,-1.33319 0.49406,-1.21947 0.59209,-2.34875 h -0.47446 l 0.0823,-0.41956 z m -0.2235,5.38371 0.0745,-0.38427 q 0.68228,-0.41564 1.094,-1.1685 0.41171,-0.75678 0.67835,-2.12133 0.26664,-1.36847 0.149,-2.12133 -0.11763,-0.75678 -0.64306,-1.17242 l 0.0745,-0.38427 q 0.87441,0.4274 1.18026,1.35671 0.30585,0.92539 0.0353,2.32131 -0.27056,1.392 -0.93715,2.32131 -0.66659,0.92538 -1.70569,1.35279 z"
-         id="text100"
-         style="font-style:italic;font-size:8.03047px;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif Italic';fill:#f92672;stroke-width:3.29999;stroke-linecap:round;stroke-linejoin:round"
-         aria-label="(cx,cy)" />
-      <circle
-         style="fill:#f92672;stroke:#f92672;stroke-width:3.29999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
-         id="path100"
-         cx="333.31662"
-         cy="121.74031"
-         r="1.9063908" />
-    </g>
-    <g
-       id="g105"
-       class="fragment"
-       data-fragment-index="6">
-      <g
-         id="path102">
-        <path
-           style="color:#000000;fill:#f92672;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
-           d="m 308.17158,44.185299 h 25.35301"
-           id="path110" />
-        <path
-           style="color:#000000;fill:#fd971f;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
-           d="m 308.17187,43.685547 a 0.5,0.5 0 0 0 -0.5,0.5 0.5,0.5 0 0 0 0.5,0.5 h 25.35352 a 0.5,0.5 0 0 0 0.5,-0.5 0.5,0.5 0 0 0 -0.5,-0.5 z"
-           id="path111" />
-        <g
-           id="g108">
-          <path
-             style="color:#000000;fill:#fd971f;-inkscape-stroke:none"
-             d="m 331.12891,40.832031 -0.70704,0.707031 2.64649,2.646485 -2.64649,2.646484 0.70704,0.707031 3.35351,-3.353515 z"
-             id="path109" />
-          <path
-             style="color:#000000;fill:#fd971f;-inkscape-stroke:none"
-             d="m 310.56836,40.832031 -3.35352,3.353516 3.35352,3.353515 0.70703,-0.707031 -2.64648,-2.646484 2.64648,-2.646485 z"
-             id="path108" />
-        </g>
-      </g>
-      <path
-         d="m 303.26454,37.915321 q 0.32512,0 0.52267,-0.102888 0.20165,-0.102873 0.20165,-0.308648 0,-0.139914 -0.0781,-0.234574 -0.0781,-0.09464 -0.30042,-0.181067 -0.22223,-0.08642 -0.65846,-0.205767 -0.60082,-0.1605 -0.97944,-0.460916 -0.3745,-0.300416 -0.3745,-0.880679 0,-0.584374 0.4856,-0.967099 0.48974,-0.382725 1.41156,-0.382725 0.58438,0 1.01649,0.152275 0.43623,0.14816 0.7531,0.378609 l -0.51852,0.76545 q -0.27162,-0.168728 -0.58438,-0.267497 -0.31277,-0.102873 -0.62965,-0.102873 -0.62552,0 -0.62552,0.337455 0,0.111117 0.0781,0.19342 0.0823,0.0782 0.30452,0.164614 0.22222,0.08231 0.65023,0.205766 0.42389,0.119346 0.73665,0.275727 0.31687,0.156388 0.48972,0.419762 0.17277,0.259264 0.17277,0.687258 0,0.477377 -0.28397,0.802487 -0.28396,0.320995 -0.7531,0.481492 -0.46915,0.160501 -1.02882,0.160501 -0.63376,0 -1.11937,-0.181068 -0.48562,-0.181068 -0.82718,-0.477378 l 0.65433,-0.732526 q 0.25515,0.197536 0.57615,0.329225 0.3251,0.131683 0.70782,0.131683 z m 5.07009,-5.868443 q 0.33746,0 0.55145,0.209881 0.214,0.209881 0.214,0.522644 0,0.312765 -0.214,0.526761 -0.21399,0.209881 -0.55145,0.209881 -0.34158,0 -0.55968,-0.209881 -0.214,-0.213996 -0.214,-0.526761 0,-0.312763 0.214,-0.522644 0.2181,-0.209881 0.55968,-0.209881 z m 0.78603,2.288114 v 3.48156 h 1.11114 v 0.888909 h -3.65028 v -0.888909 h 1.2387 v -2.59265 h -1.19755 v -0.88891 z m 3.81901,3.386909 h 2.18935 l -0.12337,0.98356 h -3.6009 v -0.917716 l 2.16876,-2.473305 h -1.98768 v -0.979448 h 3.50213 v 0.913602 z m 4.51452,-0.823064 q 0.0658,0.534991 0.34979,0.769565 0.28396,0.230457 0.69962,0.230457 0.3004,0 0.58026,-0.09877 0.27982,-0.09877 0.53909,-0.26338 l 0.52266,0.707836 q -0.30865,0.263381 -0.749,0.432108 -0.43622,0.168728 -0.99591,0.168728 -0.74897,0 -1.25518,-0.296303 -0.50618,-0.300418 -0.76133,-0.823062 -0.25515,-0.522648 -0.25515,-1.201673 0,-0.646105 0.24692,-1.172867 0.24692,-0.530875 0.72019,-0.84364 0.47738,-0.31688 1.16464,-0.31688 0.62552,0 1.08233,0.267496 0.46092,0.267495 0.71195,0.769565 0.25515,0.502068 0.25515,1.205788 0,0.111117 -0.007,0.238688 -0.004,0.127576 -0.0168,0.226343 z m 0.8066,-1.835432 q -0.3498,0 -0.56379,0.251035 -0.214,0.251033 -0.25929,0.802487 h 1.60499 q -0.004,-0.477377 -0.1853,-0.765451 -0.18099,-0.288071 -0.59671,-0.288071 z m 8.61747,4.563887 -1.01649,-0.465032 3.461,-7.181228 1.00825,0.465031 z m 11.51057,-6.769698 q 0.3786,0 0.68724,0.09877 0.31278,0.09877 0.55146,0.267496 l -0.49383,0.790141 q -0.16454,-0.119346 -0.35393,-0.172841 -0.18511,-0.05761 -0.36627,-0.05761 -0.46503,0 -0.7819,0.415648 -0.31277,0.415646 -0.36216,1.201672 0.25516,-0.267496 0.57205,-0.390955 0.32098,-0.127576 0.62552,-0.127576 0.44444,0 0.8066,0.222228 0.36213,0.218111 0.57615,0.641988 0.21399,0.419762 0.21399,1.024714 0,0.572029 -0.24692,1.045292 -0.24692,0.469147 -0.70371,0.748987 -0.4527,0.279841 -1.07412,0.279841 -0.5679,0 -0.97121,-0.213995 -0.40329,-0.218112 -0.65843,-0.592607 -0.25515,-0.378609 -0.3745,-0.868332 -0.11931,-0.493837 -0.11931,-1.045291 0,-0.962985 0.29629,-1.699625 0.30042,-0.736642 0.85187,-1.152288 0.55556,-0.415648 1.32515,-0.415648 z m -0.25927,2.921875 q -0.4815,0 -0.86012,0.436224 0.0126,0.855986 0.18101,1.279865 0.16865,0.419763 0.60496,0.419763 0.36627,0 0.53499,-0.312765 0.17277,-0.312765 0.17277,-0.757219 0,-0.584374 -0.16865,-0.823064 -0.16455,-0.242804 -0.46503,-0.242804 z"
-         id="text105"
-         style="font-weight:bold;font-size:4.29191px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Bold';fill:#fd971f;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
-         aria-label="size / 6" />
-    </g>
-    <g
-       id="g106"
-       class="fragment"
-       data-fragment-index="7">
-      <g
-         id="path101">
-        <path
-           style="color:#000000;fill:#f92672;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
-           d="M 302.67277,48.743801 V 121.98385"
-           id="path114" />
-        <path
-           style="color:#000000;fill:#fd971f;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
-           d="m 302.67187,48.244141 a 0.5,0.5 0 0 0 -0.5,0.5 v 73.240239 a 0.5,0.5 0 0 0 0.5,0.5 0.5,0.5 0 0 0 0.5,-0.5 V 48.744141 a 0.5,0.5 0 0 0 -0.5,-0.5 z"
-           id="path115" />
-        <g
-           id="g112">
-          <path
-             style="color:#000000;fill:#fd971f;-inkscape-stroke:none"
-             d="m 300.02539,118.88086 -0.70703,0.70703 3.35351,3.35352 3.35352,-3.35352 -0.70703,-0.70703 -2.64649,2.64648 z"
-             id="path113" />
-          <path
-             style="color:#000000;fill:#fd971f;-inkscape-stroke:none"
-             d="m 302.67187,47.787109 -3.35351,3.353516 0.70703,0.707031 2.64648,-2.646484 2.64649,2.646484 0.70703,-0.707031 z"
-             id="path112" />
-        </g>
-      </g>
-      <path
-         d="m 262.12652,89.636207 q 0.3365,0 0.54094,-0.106452 0.2087,-0.106452 0.2087,-0.319454 0,-0.144795 -0.0809,-0.242787 -0.0809,-0.09787 -0.31094,-0.187408 -0.23,-0.08946 -0.68149,-0.212969 -0.62187,-0.166152 -1.01371,-0.477046 -0.3876,-0.310929 -0.3876,-0.911495 0,-0.604838 0.50259,-1.000944 0.50686,-0.396122 1.46094,-0.396122 0.60485,0 1.05208,0.157574 0.45148,0.153371 0.77946,0.391869 l -0.53668,0.792227 q -0.28113,-0.174626 -0.60484,-0.276856 -0.3237,-0.106452 -0.65167,-0.106452 -0.64742,0 -0.64742,0.349271 0,0.115021 0.0809,0.200188 0.085,0.08089 0.31518,0.170373 0.23,0.08526 0.67297,0.212969 0.43873,0.123442 0.76244,0.285367 0.32797,0.161778 0.50686,0.434465 0.17889,0.268332 0.17889,0.711306 0,0.494081 -0.29391,0.830571 -0.29389,0.332235 -0.77945,0.498336 -0.48556,0.166152 -1.06483,0.166152 -0.65593,0 -1.15854,-0.187409 -0.5026,-0.187407 -0.85614,-0.494081 l 0.67725,-0.758158 q 0.26407,0.204444 0.59631,0.340745 0.33648,0.136385 0.7326,0.136385 z m 5.24751,-6.073822 q 0.34926,0 0.57075,0.217224 0.2215,0.217225 0.2215,0.540934 0,0.32371 -0.2215,0.545188 -0.22149,0.217241 -0.57075,0.217241 -0.35353,0 -0.57927,-0.217241 -0.22149,-0.221478 -0.22149,-0.545188 0,-0.323709 0.22149,-0.540934 0.22574,-0.217224 0.57927,-0.217224 z m 0.81354,2.368194 v 3.603398 h 1.15002 v 0.920021 h -3.77804 v -0.920021 h 1.28206 v -2.683394 h -1.23946 v -0.920004 z m 3.95267,3.505439 h 2.26596 l -0.12786,1.01798 h -3.72692 V 89.50416 l 2.24467,-2.559856 h -2.05727 v -1.013725 h 3.62471 v 0.945565 z m 4.67249,-0.851878 q 0.0682,0.553714 0.36205,0.7965 0.2939,0.238514 0.7241,0.238514 0.31092,0 0.60057,-0.102248 0.28963,-0.102248 0.55796,-0.272602 l 0.54093,0.732612 q -0.31945,0.272587 -0.77519,0.447231 -0.4515,0.174627 -1.03077,0.174627 -0.7752,0 -1.2991,-0.306674 -0.52389,-0.310929 -0.78797,-0.851862 -0.26407,-0.540933 -0.26407,-1.243729 0,-0.668726 0.25556,-1.213915 0.25554,-0.549459 0.74538,-0.873168 0.49407,-0.327964 1.20538,-0.327964 0.64742,0 1.12021,0.276857 0.47704,0.276858 0.73687,0.7965 0.26408,0.519644 0.26408,1.247986 0,0.115021 -0.008,0.24704 -0.004,0.132011 -0.017,0.23426 z m 0.83483,-1.899658 q -0.36204,0 -0.58353,0.259822 -0.22148,0.259805 -0.26833,0.830571 h 1.66114 q -0.004,-0.494098 -0.19167,-0.792245 -0.18741,-0.298148 -0.61761,-0.298148 z m 8.91908,4.723607 -1.05207,-0.481316 3.5821,-7.432548 1.04355,0.481318 z m 11.27873,-7.006623 q 0.67298,0 1.12448,0.234259 0.45575,0.234277 0.68149,0.621874 0.23,0.383342 0.23,0.834826 0,0.357781 -0.12344,0.702796 -0.11929,0.340745 -0.39613,0.724087 -0.27686,0.379087 -0.73686,0.843352 -0.45576,0.464265 -1.12872,1.064832 h 2.52153 l -0.1448,1.026506 h -3.92285 v -0.954093 q 0.72835,-0.702796 1.21817,-1.209658 0.49409,-0.506862 0.78798,-0.873168 0.29815,-0.370561 0.42594,-0.655929 0.12786,-0.285383 0.12786,-0.549459 0,-0.35778 -0.20871,-0.566495 -0.20445,-0.208698 -0.58354,-0.208698 -0.33648,0 -0.58353,0.140589 -0.24704,0.14059 -0.47705,0.455739 l -0.82631,-0.621856 q 0.33224,-0.460011 0.8178,-0.732613 0.48556,-0.276857 1.19687,-0.276857 z"
-         id="text106"
-         style="font-weight:bold;font-size:4.9389px;font-family:'Fira Code';-inkscape-font-specification:'Fira Code, Bold';fill:#fd971f;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"
-         aria-label="size / 2" />
-    </g>
-  </g>
-</svg>
-</p>
-</div>
-</div>
-</section>
-<section id="tic-tac-solution" class="slide level2">
-<h2>Tic-Tac-Solution</h2>
-<pre ><code class="mypython" style="font-size:.8em; max-height:800px"># File: TicTacToeBoard.py
-
-"""
-This program draws a Tic-Tac-Toe board in the center of the
-graphics window.
-"""
-
-from pgl import GWindow, GLine
-
-# Constants
-
-GWINDOW_WIDTH = 500
-GWINDOW_HEIGHT = 300
-BOARD_SIZE = 240
-
-# Main program
-
-def tic_tac_toe_board():
-    """
-    Draws a Tic-Tac-Toe board.  The program centers the board
-    on the window and computes the coordinates of the lines
-    from the constant BOARD_SIZE.
-    """
-    gw = GWindow(GWINDOW_WIDTH, GWINDOW_HEIGHT)
-    cx = gw.get_width() / 2
-    cy = gw.get_height() / 2
-    half = BOARD_SIZE / 2
-    sixth = BOARD_SIZE / 6
-    gw.add(GLine(cx - half, cy - sixth, cx + half, cy - sixth))
-    gw.add(GLine(cx - half, cy + sixth, cx + half, cy + sixth))
-    gw.add(GLine(cx - sixth, cy - half, cx - sixth, cy + half))
-    gw.add(GLine(cx + sixth, cy - half, cx + sixth, cy + half))
-
-# Startup code
-
-if __name__ == "__main__":
-    tic_tac_toe_board()</code></pre>
-</section>
-<section id="midterm-1-review" class="slide level2">
-<h2>Midterm 1 Review</h2>
-<ul>
-<li>The rest of section slides go through the solutions to the first
-practice midterm so that you can see how to approach these
-problems.</li>
+<li>These section slides go through the solutions to the practice
+midterms so that you can see how to approach these problems.</li>
 <li>The actual Midterm 1 will have the same number of questions, each
 with the same topics.</li>
 </ul>
 </section>
-<section id="practice-midterm-1-problem-1a" class="slide level2">
-<h2>Practice Midterm 1: Problem 1a</h2>
+<section>
+<section id="practice-1---prob-1" class="title-slide slide level1">
+<h1>Practice 1 - Prob 1</h1>
+
+</section>
+<section id="part-a-numeric-expressions" class="slide level2">
+<h2>Part A: Numeric Expressions</h2>
 <p><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
@@ -698,8 +229,8 @@ with the same topics.</li>
 </svg>
 </p>
 </section>
-<section id="practice-midterm-1-problem-1b" class="slide level2">
-<h2>Practice Midterm 1: Problem 1b</h2>
+<section id="part-b-boolean-expressions" class="slide level2">
+<h2>Part B: Boolean Expressions</h2>
 <p><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
@@ -879,8 +410,8 @@ with the same topics.</li>
 </svg>
 </p>
 </section>
-<section id="practice-midterm-1-problem-1c" class="slide level2">
-<h2>Practice Midterm 1: Problem 1c</h2>
+<section id="part-c-string-expressions" class="slide level2">
+<h2>Part C: String Expressions</h2>
 <p><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
@@ -1517,10 +1048,15 @@ with the same topics.</li>
   </g>
 </svg>
 </p>
+</section></section>
+<section>
+<section id="practice-1---prob-2" class="title-slide slide level1">
+<h1>Practice 1 - Prob 2</h1>
+
 </section>
-<section id="practice-midterm-1-problem-2" class="slide level2"
+<section id="practicing-tracing" class="slide level2"
 data-state="MysteryTrace">
-<h2 data-state="MysteryTrace">Practice Midterm 1: Problem 2</h2>
+<h2 data-state="MysteryTrace">Practicing tracing</h2>
 <table id="MysteryTable">
 <tbody style="border:none;">
 <tr>
@@ -1567,27 +1103,42 @@ Console
 </td>
 </tr>
 </table>
+</section></section>
+<section>
+<section id="practice-1---prob-3" class="title-slide slide level1">
+<h1>Practice 1 - Prob 3</h1>
+
 </section>
-<section id="practice-midterm-1-problem-3" class="slide level2">
-<h2>Practice Midterm 1: Problem 3</h2>
+<section id="summing-odd-numbers" class="slide level2">
+<h2>Summing odd numbers</h2>
 <p>One approach might look like:</p>
 <pre ><code class="mypython">def sum_odds(N):
     total = 0
     for i in range(1, 2*N, 2):
         total += i
     return total</code></pre>
+</section></section>
+<section>
+<section id="practice-1---prob-4" class="title-slide slide level1">
+<h1>Practice 1 - Prob 4</h1>
+
 </section>
-<section id="practice-midterm-1-problem-4" class="slide level2">
-<h2>Practice Midterm 1: Problem 4</h2>
+<section id="removing-duplicate-letters" class="slide level2">
+<h2>Removing duplicate letters</h2>
 <pre ><code class="mypython">def remove_dups(word):
     new = ""
     for i in range(len(word)):
         if not (i > 0 and word[i] == word[i-1]):
             new += word[i]
     return new</code></pre>
+</section></section>
+<section>
+<section id="practice-2---prob-1" class="title-slide slide level1">
+<h1>Practice 2 - Prob 1</h1>
+
 </section>
-<section id="practice-midterm-2-problem-1a" class="slide level2">
-<h2>Practice Midterm 2: Problem 1a</h2>
+<section id="part-a-numeric-expressions-1" class="slide level2">
+<h2>Part A: Numeric Expressions</h2>
 <p><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
@@ -1727,8 +1278,8 @@ Console
 </svg>
 </p>
 </section>
-<section id="practice-midterm-2-problem-1b" class="slide level2">
-<h2>Practice Midterm 2: Problem 1b</h2>
+<section id="part-b-boolean-expressions-1" class="slide level2">
+<h2>Part B: Boolean Expressions</h2>
 <p><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
@@ -1862,8 +1413,8 @@ Console
 </svg>
 </p>
 </section>
-<section id="practice-midterm-2-problem-1c" class="slide level2">
-<h2>Practice Midterm 2: Problem 1c</h2>
+<section id="part-c-string-expressions-1" class="slide level2">
+<h2>Part C: String Expressions</h2>
 <p><?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
@@ -2619,10 +2170,15 @@ Console
   </g>
 </svg>
 </p>
+</section></section>
+<section>
+<section id="practice-2---prob-2" class="title-slide slide level1">
+<h1>Practice 2 - Prob 2</h1>
+
 </section>
-<section id="practice-midterm-2-problem-2" class="slide level2"
+<section id="practicing-tracing-1" class="slide level2"
 data-state="Mystery2Trace">
-<h2 data-state="Mystery2Trace">Practice Midterm 2: Problem 2</h2>
+<h2 data-state="Mystery2Trace">Practicing Tracing</h2>
 <table id="Mystery2Table">
 <tbody style="border:none;">
 <tr>
@@ -2669,9 +2225,14 @@ Console
 </td>
 </tr>
 </table>
+</section></section>
+<section>
+<section id="practice-2---prob-3" class="title-slide slide level1">
+<h1>Practice 2 - Prob 3</h1>
+
 </section>
-<section id="practice-midterm-2-problem-3" class="slide level2">
-<h2>Practice Midterm 2: Problem 3</h2>
+<section id="perfect-squares" class="slide level2">
+<h2>Perfect Squares</h2>
 <ul>
 <li>We need to be checking all possibilities between two different
 values, which would imply nested loops</li>
@@ -2685,9 +2246,14 @@ values, which would imply nested loops</li>
                 print(f"A={A}, B={b}")
                 count += 1
     return count</code></pre>
+</section></section>
+<section>
+<section id="practice-2---prob-4" class="title-slide slide level1">
+<h1>Practice 2 - Prob 4</h1>
+
 </section>
-<section id="practice-midterm-2-problem-4" class="slide level2">
-<h2>Practice Midterm 2: Problem 4</h2>
+<section id="pluralizing-words" class="slide level2">
+<h2>Pluralizing Words</h2>
 <ul>
 <li>This is mostly just practicing conditional statements and string
 operations to check the needed constraints</li>
@@ -2702,6 +2268,11 @@ operations to check the needed constraints</li>
         return word[:-1] + "ies"
     else: # Condition 3 (all else)
         return word + "s"</code></pre>
+</section></section>
+<section id="good-luck-on-your-midterm"
+class="title-slide slide level1">
+<h1>Good luck on your midterm!</h1>
+
 </section>
     </div>
   </div>

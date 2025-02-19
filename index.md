@@ -1,7 +1,7 @@
 ---
-title: "Section 5: Graphics and Midterm Review"
+title: "Section 5: Midterm Review"
 author: Jed Rembold and Eric Roberts
-date: Week of September 30th
+date: Week of February 17th
 slideNumber: true
 theme: monokai
 highlightjs-theme: monokai
@@ -19,107 +19,28 @@ tracejs:
 content_url: https://github.com/rembold-cs151-master/Section05
 ---
 
-
-## The Classic Game
-- Write a graphical program `TicTacToeBoard.py` that draws a Tic-Tac-Toe board centered in the graphics window, as shown in the following image:
-  
-  ![](./images/TicTacToeBoard-out.png){width=50%}
-
-  The size of the board should be specified as a constant, and the diagram should be centered in the window, both horizontally and vertically.
-
-
-## Coordinate Calculations
-- One of the problems that people often have is calculating the coordinates for each `GObject` on the screen given the constants provided in the template.
-
-::::::cols
-::::{.col style='flex-grow:1.2'}
-:::{style='font-size:.8em'}
-<ul>
-  <li class='fragment' data-fragment-index=1>Here are some useful steps:</li>
-  <ul>
-    <li class='fragment' data-fragment-index=2>Find a sheet of graph paper</li>
-    <li class='fragment' data-fragment-index=3>Draw the figure you want</li>
-    <li class='fragment' data-fragment-index=4>Compute the coordinates of the center of the window</li>
-    <li class='fragment' data-fragment-index=5>Compute the coordinates of each point in terms of defined constants and the center</li>
-    <ul>
-      <li class='fragment' data-fragment-index=6>The <em>x</em> coordinate of the first vertical line is shifted left by one-sixth of the board size</li>
-      <li class='fragment' data-fragment-index=7>The <em>y</em> coordinate of that line is shifted up by half the size of the board</li>
-    </ul>
-  </ul>
-</ul>
-:::
-::::
-
-::::col
-![](./images/tictactoe.svg)
-
-::::
-::::::
-
-
-## Tic-Tac-Solution
-```{.mypython style='font-size:.8em; max-height:800px'}
-# File: TicTacToeBoard.py
-
-"""
-This program draws a Tic-Tac-Toe board in the center of the
-graphics window.
-"""
-
-from pgl import GWindow, GLine
-
-# Constants
-
-GWINDOW_WIDTH = 500
-GWINDOW_HEIGHT = 300
-BOARD_SIZE = 240
-
-# Main program
-
-def tic_tac_toe_board():
-    """
-    Draws a Tic-Tac-Toe board.  The program centers the board
-    on the window and computes the coordinates of the lines
-    from the constant BOARD_SIZE.
-    """
-    gw = GWindow(GWINDOW_WIDTH, GWINDOW_HEIGHT)
-    cx = gw.get_width() / 2
-    cy = gw.get_height() / 2
-    half = BOARD_SIZE / 2
-    sixth = BOARD_SIZE / 6
-    gw.add(GLine(cx - half, cy - sixth, cx + half, cy - sixth))
-    gw.add(GLine(cx - half, cy + sixth, cx + half, cy + sixth))
-    gw.add(GLine(cx - sixth, cy - half, cx - sixth, cy + half))
-    gw.add(GLine(cx + sixth, cy - half, cx + sixth, cy + half))
-
-# Startup code
-
-if __name__ == "__main__":
-    tic_tac_toe_board()
-```
-
-## Midterm 1 Review
-- The rest of section slides go through the solutions to the first practice midterm so that you can see how to approach these problems.
+## Midterm Reviews
+- These section slides go through the solutions to the practice midterms so that you can see how to approach these problems.
 - The actual Midterm 1 will have the same number of questions, each with the same topics.
 
-
-## Practice Midterm 1: Problem 1a
+# Practice 1 - Prob 1
+## Part A: Numeric Expressions
 
 ![](./images/exam1_p1a.svg)
 
 
-## Practice Midterm 1: Problem 1b
+## Part B: Boolean Expressions
 
 ![](./images/exam1_p1b.svg)
 
 
-## Practice Midterm 1: Problem 1c
+## Part C: String Expressions
 
 ![](./images/exam1_p1c.svg)
 
 
-
-## Practice Midterm 1: Problem 2 {data-state="MysteryTrace"}
+# Practice 1 - Prob 2
+## Practicing tracing {data-state="MysteryTrace"}
 <table id="MysteryTable">
 <tbody style="border:none;">
 <tr><td><div id="MysteryTrace" style="margin:0px;"></div></td></tr>
@@ -151,7 +72,8 @@ if __name__ == "__main__":
 </tr>
 </table>
 
-## Practice Midterm 1: Problem 3
+# Practice 1 - Prob 3
+## Summing odd numbers
 One approach might look like:
 
 ```mypython
@@ -162,7 +84,8 @@ def sum_odds(N):
     return total
 ```
 
-## Practice Midterm 1: Problem 4
+# Practice 1 - Prob 4
+## Removing duplicate letters
 
 ```mypython
 def remove_dups(word):
@@ -174,22 +97,22 @@ def remove_dups(word):
 ```
 
 
-## Practice Midterm 2: Problem 1a
+# Practice 2 - Prob 1
+## Part A: Numeric Expressions
 
 ![](./images/exam2_p1a.svg)
 
-
-## Practice Midterm 2: Problem 1b
+## Part B: Boolean Expressions
 
 ![](./images/exam2_p1b.svg)
 
-
-## Practice Midterm 2: Problem 1c
+## Part C: String Expressions
 
 ![](./images/exam2_p1c.svg)
 
 
-## Practice Midterm 2: Problem 2 {data-state="Mystery2Trace"}
+# Practice 2 - Prob 2
+## Practicing Tracing {data-state="Mystery2Trace"}
 <table id="Mystery2Table">
 <tbody style="border:none;">
 <tr><td><div id="Mystery2Trace" style="margin:0px;"></div></td></tr>
@@ -221,8 +144,8 @@ def remove_dups(word):
 </tr>
 </table>
 
-
-## Practice Midterm 2: Problem 3
+# Practice 2 - Prob 3
+## Perfect Squares
 - We need to be checking all possibilities between two different values, which would imply nested loops
 - One approach might look like:
 ```mypython
@@ -236,7 +159,8 @@ def perfect_squares(N):
     return count
 ```
 
-## Practice Midterm 2: Problem 4
+# Practice 2 - Prob 4
+## Pluralizing Words
 - This is mostly just practicing conditional statements and string operations to check the needed constraints
 - One solution:
 ```mypython
@@ -250,3 +174,5 @@ def create_regular_plural(word):
     else: # Condition 3 (all else)
         return word + "s"
 ```
+
+# Good luck on your midterm!
