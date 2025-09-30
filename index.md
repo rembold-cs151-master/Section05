@@ -1,7 +1,7 @@
 ---
 title: "Section 5: Midterm Review"
 author: Jed Rembold and Eric Roberts
-date: Week of February 17th
+date: Week of September 29th
 slideNumber: true
 theme: monokai
 highlightjs-theme: monokai
@@ -21,7 +21,8 @@ content_url: https://github.com/rembold-cs151-master/Section05
 
 ## Midterm Reviews
 - These section slides go through the solutions to the practice midterms so that you can see how to approach these problems.
-- The actual Midterm 1 will have the same number of questions, each with the same topics.
+- Rembold's actual Midterm 1 will have the same number of questions, each with the same topics.
+- Calvin's actual Midterm 1 follows a different format, but being able to complete these questions will still be a good method of studying
 
 # Practice 1 - Prob 1
 ## Part A: Numeric Expressions
