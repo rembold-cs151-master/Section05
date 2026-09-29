@@ -1,7 +1,7 @@
 ---
 title: "Section 5: Midterm Review"
 author: Jed Rembold and Eric Roberts
-date: Week of February 17th
+date: Week of September 28th
 slideNumber: true
 theme: monokai
 highlightjs-theme: monokai
